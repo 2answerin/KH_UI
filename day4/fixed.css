@@ -1,0 +1,17 @@
+.container {
+  background-color: yellow;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+  border: 1px solid black;
+}
+
+.box {
+  background-color: brown;
+  position: fixed; /* 스크롤바를 내려도 박스 고정 */
+  left: 20px;
+  top: 20px;
+}

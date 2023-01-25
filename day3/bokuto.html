@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOKUTO</title>
+    <!-- 
+      절대경로 - 처음부터 끝까지 다 적음
+      상대경로 - 권장사항. 현재 내 위치를 기준으로 찾음
+      . 하나면 현재 내가 바라보는 경로 .. 두개면 현재 내 위치의 상위 경로
+    -->
+    <link rel="stylesheet" href="./bokuto.css" />
+    <script src="https://kit.fontawesome.com/a6f963a918.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- 메뉴바 구성(Navbar) -->
+    <header>
+      <h1>ACE4</h1>
+      <ul class="gnb">
+        <!-- li*6>a[href='#'] -->
+        <li><a href="https://namu.wiki/w/%EB%B3%B4%EC%BF%A0%ED%86%A0%20%EC%BD%94%ED%83%80%EB%A1%9C">선수소개</a></li>
+        <li><a href="#">소식</a></li>
+        <li><a href="#">티켓</a></li>
+        <li><a href="#">굿즈</a></li>
+        <li><a href="#">일정</a></li>
+        <li><a href="#">방명록</a></li>
+      </ul>
+      <ul class="sns">
+        <!-- li*3>a[href='#']>i -->
+        <li>
+          <a href="#"><i class="fas fa-search"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </li>
+      </ul>
+    </header>
+    <hr />
+    <!-- 콘텐츠 구성(figure태그) -->
+    <div>
+      <video src="../images/car.mp4" autoplay muted loop></video>
+      <article class="txt">
+        <p>Back-End/Front-End<br />Development</p>
+      </article>
+    </div>
+    <h3>컨텐츠</h3>
+    <hr />
+    <!-- 바닥글(footer태그) -->
+    <footer>2023 ace4 &copy; ALL RICHTS RESERVED</footer>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>좌표값 확인하기</title>
+    <link rel="stylesheet" href="./coordinate.css" />
+  </head>
+  <body>
+    <!-- .line.~ 하면 .이 띄어쓰기-->
+    <div class="line horizontal"></div>
+    <div class="line vertical"></div>
+    <img class="target" src="../images/target.png" alt="타겟" />
+    <span class="loc">야 보여? 보이니? 안녕 날 쏴바!</span>
+    <script type="text/javascript">
+      // 변수 선언 시 var를 쓰지 않음
+      // let 변수, const(final) 상수
+      // document - window객체의 자손객체임, 여기서는 coordinate.html전체
+      // 자바스크립트언어로 html문서의 태그를 접근하려면 document객체가 제공하는
+      // 함수 querySelector를 사용
+      const vertical = document.querySelector(".vertical");
+      const horizontal = document.querySelector(".horizontal"); // 마우스
+      const target = document.querySelector(".vertical"); // 마우스에 이미지가 따라다님
+      const loc = document.querySelector(".loc");
+      // 이벤트 처리
+      document.addEventListener("mousemove", (event) => {
+        const x = event.clientX;
+        const y = event.clientY;
+        console.log(`${x} ${y}`);
+
+        vertical.style.left = `${x}px`;
+        horizontal.style.top = `${y}px`;
+
+        target.style.left = `${x}px`;
+        target.style.top = `${y}px`;
+
+        loc.style.left = `${x}px`;
+        loc.style.top = `${y}px`;
+
+        loc.innerHTML = `${x} ${y}`;
+      });
+    </script>
+  </body>
+</html>
+<!-- 
+  querySelector - 태그 안에 클래스 이름을 찾아달라
+  -->

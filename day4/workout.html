@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/a6f963a918.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./workout.css" />
+    <!-- 
+      외부에 자바스크립트를 호출할 때 반드시 DOM tree가 완성되어 있어야 함
+      자바스크립트 파일은 웹 서버로부터 다운로드 받고 브라우저가 실행을 함
+      이때 해당 html문서의 DOM구성이 완료되지 않으면
+      이벤트 소스의 정보가 undefined 상태이므로 에러 발생
+      TypeError..
+      이때 defer를 붙혀주면 DOM tree가 완성될 때 까지 기다렸다가 실행됨
+      때문에 버튼의 객체를 인지하므로 에러 발생 안함
+    -->
+    <script defer src="./workout.js"></script>
+  </head>
+  <body>
+    <section class="list">
+      <!-- 헤어 영역 -->
+      <header class="header">WorkoutApp</header>
+
+      <ul class="items">
+        <li class="item_row">
+          <div class="item">
+            <span class="itml_name">스쿼트</span>
+            <button class="btn_delete">
+              <i class="fas far fa-trash-alt"></i>
+            </button>
+          </div>
+        </li>
+        <li class="item_row">
+          <div class="item">
+            <span class="itml_name">앞차기</span>
+            <button class="btn_delete">
+              <i class="fas far fa-trash-alt"></i>
+            </button>
+          </div>
+        </li>
+        <li class="item_row">
+          <div class="item">
+            <span class="itml_name">뒷차기</span>
+            <button class="btn_delete">
+              <i class="fas far fa-trash-alt"></i>
+            </button>
+          </div>
+        </li>
+        <li class="item_row">
+          <div class="item">
+            <span class="itml_name">뒷차기</span>
+            <button class="btn_delete">
+              <i class="fas far fa-trash-alt"></i>
+            </button>
+          </div>
+        </li>
+        <li class="item_row">
+          <div class="item">
+            <span class="itml_name">뒷차기</span>
+            <button class="btn_delete">
+              <i class="fas far fa-trash-alt"></i>
+            </button>
+          </div>
+        </li>
+        <li class="item_row">
+          <div class="item">
+            <span class="itml_name">뒷차기</span>
+            <button class="btn_delete">
+              <i class="fas far fa-trash-alt"></i>
+            </button>
+          </div>
+        </li>
+        <li class="item_row">
+          <div class="item">
+            <span class="itml_name">뒷차기</span>
+            <button class="btn_delete">
+              <i class="fas far fa-trash-alt"></i>
+            </button>
+          </div>
+        </li>
+        <li class="item_row">
+          <div class="item">
+            <span class="itml_name">뒷차기</span>
+            <button class="btn_delete">
+              <i class="fas far fa-trash-alt"></i>
+            </button>
+          </div>
+        </li>
+        <li class="item_row">
+          <div class="item">
+            <span class="itml_name">뒷차기</span>
+            <button class="btn_delete">
+              <i class="fas far fa-trash-alt"></i>
+            </button>
+          </div>
+        </li>
+        <li class="item_row">
+          <div class="item">
+            <span class="itml_name">뒷차기</span>
+            <button class="btn_delete">
+              <i class="fas far fa-trash-alt"></i>
+            </button>
+          </div>
+        </li>
+        <li class="item_row">
+          <div class="item">
+            <span class="itml_name">뒷차기</span>
+            <button class="btn_delete">
+              <i class="fas far fa-trash-alt"></i>
+            </button>
+          </div>
+        </li>
+        <li class="item_row">
+          <div class="item">
+            <span class="itml_name">뒷차기</span>
+            <button class="btn_delete">
+              <i class="fas far fa-trash-alt"></i>
+            </button>
+          </div>
+        </li>
+        <li class="item_row">
+          <div class="item">
+            <span class="itml_name">앞차기</span>
+            <button class="btn_delete">
+              <i class="fas far fa-trash-alt"></i>
+            </button>
+          </div>
+        </li>
+        <li class="item_row">
+          <div class="item">
+            <span class="itml_name">뒷차기</span>
+            <button class="btn_delete">
+              <i class="fas far fa-trash-alt"></i>
+            </button>
+          </div>
+        </li>
+        <li class="item_row">
+          <div class="item">
+            <span class="itml_name">뒷차기</span>
+            <button class="btn_delete">
+              <i class="fas far fa-trash-alt"></i>
+            </button>
+          </div>
+        </li>
+        <li class="item_row">
+          <div class="item">
+            <span class="itml_name">뒷차기</span>
+            <button class="btn_delete">
+              <i class="fas far fa-trash-alt"></i>
+            </button>
+          </div>
+        </li>
+      </ul>
+      <!-- footer 영역 -->
+      <footer class="footer">
+        <!-- 운동이름 입력 화면 -->
+        <input type="text" name="" class="user_input" />
+        <!-- input:text -->
+        <button class="btn_add">
+          <i class="fas fas fa-plus"></i>
+        </button>
+      </footer>
+      <!-- <script src="./workout.js"></script> --> <!-- 여기에 있으면 버튼 인지를 먼저 하기 때문에 defer가 없어도 됨 -->
+    </section>
+  </body>
+</html>
