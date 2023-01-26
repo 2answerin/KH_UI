@@ -1,14 +1,8 @@
-// 객체 데이터
-
-const student = {
-  name : `이순신`,
-  age : 45,
-  tel: null
+const dept = {
+  deptno : 10,
+  dname : null
 }
 
-console.log(student);
-console.log(student.name);
-console.log(student.age);
-console.log(student[`name`]);
-console.log(student.tel);
-console.log(student.email);
+console.log(dept);
+console.log(dept.deptno);
+console.log(dept['age']);

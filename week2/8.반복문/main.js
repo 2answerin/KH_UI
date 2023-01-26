@@ -1,28 +1,20 @@
-let colors = ["red", "green", "blue"]; //리터널 이용한 배열 선언 및 초기화
+let colors = ["red", "green", "blue"];
 
-for (color in colors) {
-  // 개선된 for문, 자바랑 다른점 in
-  console.log(color, ",color:", colors[color]);
-}
-for (color of colors) {
-  console.log("color:" + color);
-}
+// 콜백함수 = 함수를 호출할 때 인수(파라미터)로 함수가 들어가는 형태
+// arr.forEach(callback(currentvalue[, index[, array]])[, thisArg])
 
-let items = [
-  { id: 1, name: "벤츠", count: 0 },
-  { id: 2, name: "티코", count: 0 },
-  { id: 3, name: "람보르기니", count: 0 },
-];
+/* colors.forEach(function(color,index,items){
+  console.log(color);
+  console.log(index);
+  console.log(items);
+}) */
 
-for (let item of items) {
-  console.log(item.id + item.name + item.count);
-}
+/* colors.forEach((color,index) => {
+  console.log(color);
+  console.log(index);
+}) */
 
-const student = {
-  name: "고양이",
-  age: 4,
-  address: "이천",
-};
-for (let key in student) {
-  console.log(key, ",", student[key]);
-}
+colors.map(function(color,index){
+  console.log(color);
+  console.log(index);
+})

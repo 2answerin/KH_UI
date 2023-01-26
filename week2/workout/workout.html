@@ -67,13 +67,12 @@
       }; //end of init
 
       const handleAdd = () => {
-        const name = document.querySelector('.add-input').value
-        const workouts = [...items, { id: items.length + 1,name, count: 0 }];
-        document.querySelector('.add-input').value = ""
-        items = [...workouts]
-        init()
+        const name = document.querySelector(".add-input").value;
+        const workouts = [...items, { id: items.length + 1, name, count: 0 }];
+        document.querySelector(".add-input").value = "";
+        items = [...workouts];
+        init();
       };
-
     </script>
   </head>
   <body>
@@ -84,7 +83,7 @@
     </script>
     <h3>침수차</h3>
     <div class="container">
-      <input type="text" class="add-input" placeholder="풍덩"/>
+      <input type="text" class="add-input" placeholder="풍덩" />
       <button class="add-button" onclick="handleAdd()">추가</button>
       <ul class="ul"></ul>
     </div>
