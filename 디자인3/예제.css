@@ -1,0 +1,33 @@
+* {
+  margin: 0; /* 4면에 대한 외부여백 0 */
+  padding: 0; /* 4면에 대한 내부여백 0 */
+  box-sizing: border-box; /* 여백을 포함한 크기계산 */
+  /* border: 1px solid red; */
+}
+
+ul {
+list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: rgb(246, 189, 125);
+}
+
+.btn{
+  display: block;
+  margin: auto;
+}
+
+.wrap {
+  width: 340px;
+  padding: 30px;
+  background-color: white;
+  position: absolute;
+  left: 50%; /* Y축 중앙배치 - 요소의 왼쪽 상단 모서리에 대한 위치(주의) */
+  top: 50%; /* X축 중앙배치 */
+  transform: translate(-50%, -50%); /* 요소의 중앙 위치 잡음 */
+}

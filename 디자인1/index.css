@@ -52,9 +52,8 @@ a {
 
 /* 가입하기 버튼 */
 .ghost-btn {
-  background-color: rgb(44, 79, 140);
-  border: 1px solid rgb(44, 79, 140);
-  color: white;
+  background-color: transparent;
+  border: 1px solid #004fff;
 }
 
 /* 내용 처리 */
@@ -118,7 +117,6 @@ a {
 .more-btn {
   /* display: none; */
 }
-
 /* 반응형 웹 추가 */
 @media screen and (max-width: 768px) {
   .main-navigation {
@@ -132,12 +130,21 @@ a {
     opacity: 0;
     transform: translateX(100%);
   }
-
   .main-navigation a {
     display: block;
     margin: auto;
     margin-bottom: 8px;
     padding: 10px;
+  }
+
+  .text-wrap h2 {
+    font-size: 36px;
+  }
+  .text-wrap h3 {
+    font-size: 20px;
+  }
+  .text-wrap p {
+    font-size: 14px;
   }
 
   .main-navigation.active {
@@ -146,7 +153,6 @@ a {
     transform: translateX(0);
     transition: 0.3s;
   }
-
   .more-btn {
     display: block;
     position: absolute;
@@ -158,12 +164,10 @@ a {
     height: 40px;
     background-color: transparent;
   }
-
   .more-btn.active .icon {
     background: url(../images/icon-close.svg);
     background-size: contain;
   }
-
   .icon {
     width: 24px;
     height: 24px;
