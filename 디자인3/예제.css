@@ -3,10 +3,62 @@
   padding: 0; /* 4면에 대한 내부여백 0 */
   box-sizing: border-box; /* 여백을 포함한 크기계산 */
   /* border: 1px solid red; */
+  font-family: "TTCrownMychewR";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/TTCrownMychewR.woff2")
+    format("woff2");
+  font-weight: bold;
+  font-style: normal;
 }
 
-ul {
-list-style: none;
+li {
+  list-style: none;
+  width: 100%;
+  padding: 10px 0px;
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+li .fab.fa-twitter {
+  width: 20%;
+  text-align: center;
+  color: rgb(59, 183, 218);
+}
+
+li .fab.fa-youtube {
+  width: 20%;
+  text-align: center;
+  color: rgb(255, 21, 0);
+}
+
+li span {
+  color: gray;
+  letter-spacing: 1px; /* 글자 간격 */
+}
+
+.wrap .others {
+  text-align: center;
+  font-size: 50px;
+}
+
+/* a(anchor) 인라인요소 -> 크기가 없음 */
+.wrap .others a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 25px 10px 0px;
+}
+
+.wrap .others a:nth-of-type(1) {
+  background-color: rgb(167, 191, 236);
+}
+.wrap .others a:nth-of-type(2) {
+  background-color: rgb(146, 167, 206);
+}
+.wrap .others a:nth-of-type(3) {
+  background-color: rgb(127, 145, 178);
+}
+.wrap .others a:nth-of-type(4) {
+  background-color: rgb(106, 121, 149);
 }
 
 a {
@@ -17,9 +69,29 @@ body {
   background-color: rgb(246, 189, 125);
 }
 
-.btn{
+.en,
+.mem {
+  text-align: center;
+}
+
+.wrap .profile .btn {
   display: block;
-  margin: auto;
+  /* 시계 방향 auto ; 양옆 */
+  margin: 10px auto 10px;
+  width: 100px;
+  font-size: 18px;
+  font-weight: bold;
+  outline: none;
+  background: black;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.wrap .profile .btn:hover {
+  color: white;
+  background: rgb(255, 0, 0);
 }
 
 .wrap {
@@ -30,4 +102,111 @@ body {
   left: 50%; /* Y축 중앙배치 - 요소의 왼쪽 상단 모서리에 대한 위치(주의) */
   top: 50%; /* X축 중앙배치 */
   transform: translate(-50%, -50%); /* 요소의 중앙 위치 잡음 */
+}
+
+/* float 속성을 주면 부모가 감싸주던 값이 0으로 되어
+아이콘을 감싸주지 못함
+가상 선택자를 선언하여 문제해결 */
+
+.wrap .menu a {
+  font-size: 20px;
+  color: rgb(246, 164, 93);
+}
+
+.wrap .menu::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.wrap .menu a:nth-of-type(1) {
+  float: left;
+}
+
+.wrap .menu a:nth-of-type(2) {
+  float: right;
+}
+
+div {
+  margin-bottom: 5px;
+}
+
+h1 {
+  margin-bottom: 5px;
+}
+
+/* 
+인라인 요소는 기본적으로 가운데 정렬이 되고
+만일 block 요소를 주면 기본적으로 왼쪽 정렬
+가운데 정렬을 원할 시 margin auto 
+*/
+
+.wrap .contact {
+  margin-bottom: 20px;
+}
+
+@font-face {
+  font-family: "TTCrownMychewR";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/TTCrownMychewR.woff2")
+    format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+.po {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 0rem;
+  text-align: center;
+}
+.polaroid {
+  width: 250px;
+  pointer-events: none;
+  background: #f8e1e1;
+  padding: 2rem;
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.2);
+}
+.caption {
+  font-family: "TTCrownMychewR";
+  font-size: 25pt;
+  text-align: center;
+  line-height: 1.2em;
+}
+.item {
+  display: inline-block;
+  margin-top: 0;
+}
+.item .polaroid:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.35s;
+}
+.item:nth-of-type(n) {
+  transform: scale(0.8, 0.8) rotate(5deg);
+  transition: all 0.35s;
+}
+.item:nth-of-type(n) .polaroid:before {
+  transform: rotate(6deg);
+  height: 20%;
+  width: 47%;
+  bottom: 30px;
+  right: 12px;
+  box-shadow: 0 2.1rem 2rem rgba(0, 0, 0, 0.4);
+}
+.item:hover {
+  filter: none;
+  transform: scale(1, 1) rotate(0deg) !important;
+  transition: all 0.35s;
+}
+.item:hover .polaroid:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transform: rotate(0deg);
+  height: 80%;
+  width: 80%;
+  bottom: 0%;
+  right: 5%;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+  transition: all 0.35s;
 }
