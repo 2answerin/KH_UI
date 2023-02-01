@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항</title>
+
+</head>
+<body>
+    <fieldset>
+        <legend>공지사항 작성하기</legend>
+    <form action="insert.no" method="post">
+
+        <table>
+            <tr>
+                <td><label>제목</label></td>
+                <td><input type="text" id = "title" name="title" placeholder="제목을 입력하시오." style ="width: 180px;" required="required"></td>
+            </tr>
+            <tr>
+                <td><label>내용</label></td>
+                <td><textarea name="content" id = "content" placeholder="내용을 입력하시오." style="height: 150px; width: 180px;" required="required"></textarea></td>
+            </tr>
+            <tr>
+                <td><label>첨부파일</label></td>
+                <td><input type = "file" name = "uploadFile" id = "uploadFile" placeholder= "파일선택"></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center;"></colspan=>
+            <button id = "btn.Join" onclick = "join()">작성하기</button>
+          </td>
+          </tr>
+        </table>
+
+    </form>
+</body>
+</html>

@@ -1,10 +1,13 @@
-npm init --yes
-
 npm i expreaa
 :Restful API를 지원하는 프레임워크
+
+npm init --yes
+:packags.json 생성됨
 
 npm i nodemon --save-dev
 npm install -g nodemon
 :--sava-dev 옵션을 붙히면 로컬에서만 사용함
+
+npm i request
 
 <script src="https://kit.fontawesome.com/a6f963a918.js" crossorigin="anonymous"></script>
