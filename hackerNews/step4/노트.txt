@@ -1,0 +1,7 @@
+1. 익명함수
+2. 익명함수의 이벤트처리
+
+syntax
+li.addEventListener('Click', function(event){
+  
+})
