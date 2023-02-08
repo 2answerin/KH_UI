@@ -4,12 +4,12 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebas
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB8bokjZFyEHi22n4onbNkufEFlcjVsnyo",
-  authDomain: "dynamic-osprey-372101.firebaseapp.com",
-  projectId: "dynamic-osprey-372101",
-  storageBucket: "dynamic-osprey-372101.appspot.com",
-  messagingSenderId: "715299124891",
-  appId: "1:715299124891:web:9260115f4c9a36d4c4f83e",
+  apiKey: "AIzaSyDZM_v974F6EGAZNzTfqsX-zEXTWu7OedY",
+  authDomain: "kh230208-377200.firebaseapp.com",
+  projectId: "kh230208-377200",
+  storageBucket: "kh230208-377200.appspot.com",
+  messagingSenderId: "419310925886",
+  appId: "1:419310925886:web:a88e4025ae9baede15f96f",
 };
 
 // Initialize Firebase
