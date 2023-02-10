@@ -1,4 +1,6 @@
 const ajax = new XMLHttpRequest();
+//문자열 처리하는 경우가 훨씬 직관적 - 정적(고정) - 결정된 상태
+//배열은 덜 함 - 뚝뚝 끊어짐 - 동적
 const videoList = [];
 const key = "AIzaSyDZM_v974F6EGAZNzTfqsX-zEXTWu7OedY";
 const MOST_URL = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=${key}`;

@@ -31,7 +31,7 @@ const search = (query) => {
   for (let i = 0; i < items.length; i++) {
     // 25번 반복
     videoList.push(`<li class = "container">`);
-    videoList.push(`<div class = "video">`);
+    videoList.push(`<div class = "video">`); 
     videoList.push(
       `<img class = "thumbnail" src = "${items[i].snippet.thumbnails.medium.url}">`
     );
