@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>a31.html</title>
+    <script type="text/javascript">
+      const send = (e) => {
+        //관전포인트
+        //함수 파라미터로 넘기는 this는 button객체, 이벤트 객체가 아님
+        //이벤트 방지코드인 preventDefault는 먹지않음 - 주의
+        console.log("전송 호출"+e);
+        e.preventDefault()
+        //document.querySelector("#f_test").submit()
+      }
+    </script>
+  </head>
+  <body>
+    <form id="f_test" action="a1.html" method="get">
+      <input type="text" name="" id="" />
+      <button type="submit" id = "btnSend">전송</button>
+      <script>
+        const btnSend = document.querySelector("#btnSend")
+        btnSend.addEventListener('click',event => {
+          event.preventDefault()
+          console.log("전송 버튼 클릭 - 전송이 된다|안된다");
+        })
+      </script>
+  </body>
+</html>
