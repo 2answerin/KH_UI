@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <meta charset="UTF-8" />
+    <title>회원가입</title>
+
+    <!-- form 태그에는 name 대신 id사용 -->
+    <form method="get" action="joinAction.jsp">
+      <fieldset>
+        <legend>회원가입 양식</legend>
+        <table>
+          <tr>
+            <td><label for="ID">ID</label></td>
+            <td>
+              <input id="ID" type="text" />
+              <input type="button" value="중복확인" id="check" />
+            </td>
+          </tr>
+          <!-- 
+      button - submit -> 화면 전환
+      input - type:button
+      a - href - 페이지 이동 or 함수호출(페이지 이동과 관련없음) - 화면전환 X
+      location.href=hashchange
+      버튼이 눌릴 때마다 이벤트가 적용되어야 하므로 addEventListener 처리
+      oclick으로 하면 마지막 한번만 처리되므로 주의
+    -->
+          <tr>
+            <td><label for="pwd">비밀번호</label></td>
+            <td><input id="pwd" type="password" /></td>
+          </tr>
+          <tr>
+            <td><label for="pwd2">비밀번호 확인</label></td>
+            <td><input id="pwd2" type="password" /></td>
+          </tr>
+          <tr>
+            <td><label>지역</label></td>
+            <td>
+              <input id="seoul" type="radio" name="loc" class="loc" />
+              <label for="seoul">서울</label>
+              <input id="busan" type="radio" name="loc" class="loc" />
+              <label for="busan">부산</label>
+              <input id="incheon" type="radio" name="loc" class="loc" />
+              <label for="incheon">인천</label>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <input type="button" value="초기화" />
+              <input type="button" id="btnJoin" value="회원가입" />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+    </form>
+    <script>
+      const check = document.querySelector("#check");
+      check.addEventListener("click", () => {
+        const regEx = /^[a-z][a-zA-Z0-9!@#]{5,11}$/;
+        //^문자시작 $문자끝
+        const user = document.querySelector("#ID");
+        let str = user.value; //사용자가 텍스트필드에 입력한 아이디 읽기
+        let isFlag = false;
+        if (str.length != null && str.length > 0) {
+          isFlag = regEx.test(str);
+        }
+        const color = isFlag ? "green" : "red";
+        if (isFlag) {
+          user.style.backgroundColor = color;
+        } else {
+          user.style.backgroundColor = color;
+        }
+        console.log(color);
+        console.log(isFlag);
+      }); //end of 중복확인
+      const locs = document.querySelectorAll(".loc");
+      console.log(locs);
+      //사용자가 선택한 지역 정보 담기
+      let user = "";
+      console.log("before : " + user);
+      const locals = ["seoul", "busan", "incheon"];
+      for (let i = 0; i < locs.length; i++) {
+        locs[i].addEventListener("click", () => {
+          locs[i].value = locals[i];
+          user = locs[i].value;
+          console.log("after : " + user);
+        });
+      }
+      const btnJoin = document.querySelector("#btnJoin");
+      btnJoin.addEventListener("click", () => {
+        if (user === "" || user.length === 0) {
+          alert("지역 선택 안해?");
+          return; //if문이 return은 해당 함수를 탈출
+        }
+        console.log("지역 선택 해야만 보임");
+      });
+    </script>
+  </body>
+</html>

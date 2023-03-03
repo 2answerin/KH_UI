@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>회원가입</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function check(){
+        const pattern1 = /[a-z]/;
+        const pattern2 = /[0-9]/;
+        const special = /[!@#]/;
+        if(!pattern1.check()||!pattern2.check()||!special.check()) {
+          window.alert("화면이왜안나올까")
+        } if (search(reg) == pattern1){
+            window.alert("소문자로 시작")
+      }
+    }
+      function login() {
+
+      }
+  </script>
+    <form method="get" action="joinAction.jsp">
+      <fieldset>
+      <legend>회원가입 양식</legend>
+      <table>
+        <tr>
+          <td><label>아이디</label></td>
+          <td><input type="text" id = "id" name="id" required="required"></td>
+          <td><input id="idbtn" type="button" value="중복확인" onclick="check();"></input></td>
+      </tr>
+      <tr>
+        <td><label>비밀번호</label></td>
+        <td><input type="text" id = "pw" name="id" required="required"></td>
+    </tr>
+    <tr>
+      <td><label>비밀번호확인</label></td>
+      <td><input type="text" id = "pwcheck" name="id" required="required"></td>
+  </tr>
+  <tr>
+    <td><label id="loc">지역</label></td>
+    <td>서울<input type="radio" name = "loc" id = "seoul"  value = "name" />
+      부산<input type="radio" name = "loc" id = "busan"  value = "name" />
+      대구<input type="radio" name = "loc" id = "deagu"  value = "name" />
+  </td>
+    </tr>
+    <tr><td colspan="2" style="text-align:right;">
+      <input type='reset'>
+      <input id="loginbtn" type="button" value="회원가입" onclick="login();"></input>
+    </td></tr>
+    </table>
+    </fieldset>
+    <script>
+      Btn=document.getElementById("#idBtn")
+      Btn.addEventListener("click", () => {
+        
+      })
+    </script>
+    </form>
+  </body>
+</html>
